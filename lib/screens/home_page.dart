@@ -27,9 +27,21 @@ class HomePage extends StatelessWidget {
               );
             },
           ),
-          Category(text: 'Family Members', color: const Color(0xff558B37)),
-          Category(text: 'Colors', color: const Color(0xff9056b6)),
-          Category(text: 'Phrases', color: const Color(0xff5cb9da)),
+          Category(
+            text: 'Family Members',
+            color: const Color(0xff558B37),
+            onTap: () {},
+          ),
+          Category(
+            text: 'Colors',
+            color: const Color(0xff9056b6),
+            onTap: () {},
+          ),
+          Category(
+            text: 'Phrases',
+            color: const Color(0xff5cb9da),
+            onTap: () {},
+          ),
         ],
       ),
     );

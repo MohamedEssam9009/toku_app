@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  Category({super.key, this.text, this.color, this.onTap});
+  const Category({
+    super.key,
+    required this.text,
+    required this.color,
+    required this.onTap,
+  });
 
-  String? text;
-  Color? color;
-  VoidCallback? onTap;
+  final String text;
+  final Color color;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class Category extends StatelessWidget {
         width: double.infinity,
         color: color,
         child: Text(
-          text!,
+          text,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 18.0,
