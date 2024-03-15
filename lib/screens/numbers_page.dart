@@ -1,8 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
-
+  final Number one = const Number(
+    image: 'assets/images/numbers/number_one.png',
+    jpName: 'ichi',
+    enName: 'one',
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,20 +22,20 @@ class NumbersPage extends StatelessWidget {
           children: [
             Container(
               color: const Color(0xFFFFF6DC),
-              child: Image.asset('assets/images/numbers/number_one.png'),
+              child: Image.asset(one.image),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 16.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'ichi',
-                    style: TextStyle(color: Colors.white, fontSize: 18.0),
+                    one.jpName,
+                    style: const TextStyle(color: Colors.white, fontSize: 18.0),
                   ),
                   Text(
-                    'one',
-                    style: TextStyle(color: Colors.white, fontSize: 18.0),
+                    one.enName,
+                    style: const TextStyle(color: Colors.white, fontSize: 18.0),
                   ),
                 ],
               ),
@@ -49,4 +54,15 @@ class NumbersPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class Number {
+  final String image;
+  final String jpName;
+  final String enName;
+  const Number({
+    required this.image,
+    required this.jpName,
+    required this.enName,
+  });
 }
