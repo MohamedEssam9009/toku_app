@@ -17,7 +17,7 @@ class NumbersPage extends StatelessWidget {
         title: const Text('Numbers'),
         backgroundColor: const Color(0xff46322B),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Item(number: one),
           Item(number: one),
