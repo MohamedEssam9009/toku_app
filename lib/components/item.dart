@@ -44,9 +44,9 @@ class Item extends StatelessWidget {
                 color: Colors.white,
                 size: 28.0,
               ),
-              onPressed: () async{
-                  final player = AudioPlayer();
-                 await player.play(AssetSource('assets/sounds/numbers/number_one_sound.mp3'));
+              onPressed: () async {
+                final player = AudioPlayer();
+                await player.play(AssetSource(number.sound));
               },
             ),
           ),
