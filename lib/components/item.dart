@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 
 import '../models/number.dart';
 
-class Item extends StatelessWidget {
-  const Item({super.key, required this.number});
+class ListItem extends StatelessWidget {
+  const ListItem({super.key, required this.number, required this.color});
 
   final Number number;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffFFA944),
+      color: color,
       height: 100,
       child: Row(
         children: [

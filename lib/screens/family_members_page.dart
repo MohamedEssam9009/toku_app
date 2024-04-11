@@ -3,8 +3,8 @@ import 'package:toku_app/components/item.dart';
 
 import '../models/number.dart';
 
-class NumbersPage extends StatelessWidget {
-  const NumbersPage({super.key});
+class FamilyMembersPage extends StatelessWidget {
+  const FamilyMembersPage({super.key});
   final List<Number> numbers = const [
     Number(
       image: 'assets/images/numbers/number_one.png',
@@ -72,14 +72,14 @@ class NumbersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Numbers'),
+        title: const Text('Family Members'),
         backgroundColor: const Color(0xff46322B),
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
           return ListItem(
             number: numbers[index],
-            color: const Color(0xffFFA944),
+            color: const Color(0xff558B37),
           );
         },
         itemCount: numbers.length,
