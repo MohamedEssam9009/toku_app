@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:toku_app/components/item.dart';
 
+import '../components/phrases_item.dart';
 import '../models/item_model.dart';
 
 class PhrasesPage extends StatelessWidget {
   const PhrasesPage({super.key});
 
-  final List<ItemModel> phrases = const [
+  final List<ItemModel> phrasesList = const [
     ItemModel(
       sound: 'sounds/phrases/are_you_coming.wav',
       jpName: 'Kimasu ka',
@@ -64,11 +64,11 @@ class PhrasesPage extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (context, index) {
           return PhrasesItem(
-            item: phrases[index],
+            item: phrasesList[index],
             color: const Color(0xff5cb9da),
           );
         },
-        itemCount: phrases.length,
+        itemCount: phrasesList.length,
       ),
     );
   }

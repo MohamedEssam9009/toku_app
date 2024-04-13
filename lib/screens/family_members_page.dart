@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toku_app/components/item.dart';
+import 'package:toku_app/components/list_item.dart';
 
 import '../models/item_model.dart';
 
